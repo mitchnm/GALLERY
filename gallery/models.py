@@ -4,11 +4,27 @@ from django.db import models
 class Image(models.Model): 
     img_name = models.CharField(max_length=35)
     img_decription = models.TextField()
-    # img_location = models.ForeignKey(location)
-    # img_category = models.ForeignKey(category)
+    # img_location = models.ForeignKey(Location)
+    # img_category = models.ForeignKey(Category)
     article_image = models.ImageField(upload_to = 'gallery/')
 
     def __str__(self):
         return self.img_name
 
-class
+class Location(models.Model):
+    location = models.CharField(max_length=35, unique=True)
+
+    def __str__(self):
+        return self.location 
+
+    def save_location(self):
+        self.save()
+
+class Category(models.Model):
+    category = models.CharField(max_length=35, unique=True)
+
+    def __str__(self):
+        return self.category
+
+    def save_category(self):
+        self.save()
