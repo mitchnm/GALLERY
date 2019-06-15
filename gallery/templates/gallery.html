@@ -1,0 +1,6 @@
+{% for img in image %}
+<h1>Name: {{ img.img_name }}</h1>
+<h1>Description: {{ img.img_decription.url }}</h1>
+{% empty %}
+<h1>No info</h1>
+{% endfor %}

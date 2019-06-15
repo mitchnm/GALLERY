@@ -5,3 +5,5 @@ def welcome(request):
     image = Image.objects.all()
     return render(request, 'base.html',{'image':image})
 
+def show(request):
+    return render(request, 'gallery.html') 

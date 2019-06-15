@@ -13,13 +13,17 @@
 </head>
 
 <body>
-  {% block content %}
-  {% for img in image %}
-  <img src='{{img.article_image.url}}' alt='img'>
-  {%empty%}
-  <p>No img</p>
-  {%endfor%}
-  {% endblock %}
+  {% include "navbar.html" %}
+  <div class="container">
+    {% block content %}
+    {% for img in image %}
+    <img class='img-responsive' src='{{img.article_image.url}}' alt='img' style="width:250px; height:250px;"><br><br>
+    <a href="{% url 'show' %}" >View more</a>
+    {%empty%}
+    <p>No img</p>
+    {%endfor%}
+    {% endblock %}
+  </div>
 </body>
 
 </html>
