@@ -10,6 +10,17 @@ class Image(models.Model):
 
     def __str__(self):
         return self.img_name
+    
+    def save_image(self):
+        self.save()
+        
+    def delete_image(self):
+        self.delete()
+    
+    @classmethod
+    def search_by_title(cls,search_term):
+        photo = cls.objects.filter(img_name__icontains=search_term)
+        return photo
 
 class Location(models.Model):
     location = models.CharField(max_length=35, unique=True)
