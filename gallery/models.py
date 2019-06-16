@@ -22,8 +22,8 @@ class Category(models.Model):
 class Image(models.Model): 
     img_name = models.CharField(max_length=35)
     img_decription = models.TextField()
-    img_location = models.ForeignKey(Location, default=1)
-    img_category = models.ForeignKey(Category, default=1)
+    # img_location = models.ForeignKey(Location, default=1)
+    # img_category = models.ForeignKey(Category, default=1)
     article_image = models.ImageField(upload_to = 'gallery/')
 
     def __str__(self):
