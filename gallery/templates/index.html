@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 {{ block.super }}
-{% for img in image %}
-<img class='img-responsive' src='{{img.article_image.url}}' alt='img' style="width:250px; height:250px;"><br><br>
-<a href="{% url 'show' %}">View more</a>
-{%empty%}
-<p>No img</p>
-{%endfor%}
+<div class="row">
+  {% for img in image %}
+  <div class="col-md-3 col-sm-3 col-xs-3">
+    <img class="img-responsive" src='{{img.article_image.url}}' alt='img' style="width:250px; height:250px;">
+    <a href="{% url 'show' %}">View more</a>
+  </div>
+  {%empty%}
+  <p>No img</p>
+  {%endfor%}
+</div>
 {% endblock %}
