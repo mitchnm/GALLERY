@@ -1,6 +1,11 @@
+{%extends 'base.html'%}
+{% block content %}
 {% for img in image %}
-<h1>Name: {{ img.img_name }}</h1>
-<h1>Description: {{ img.img_decription.url }}</h1>
-{% empty %}
-<h1>No info</h1>
-{% endfor %}
+<div style="text-align: center;">
+  <h1><u>Name:</u><br><br>{{ img.img_name }}</h1><br><br><br>
+  <h1><u>Description:</u><br><br>{{ img.img_decription }}</h1>
+  {% empty %}
+  <h1>No info</h1>
+  {% endfor %}
+</div>
+{% endblock %}
