@@ -3,27 +3,27 @@
 {% block content %}
 {% for img in image %}
 <div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
+  <div class="col-md-4 col-lg-4 "></div>
+  <div class="col-md-4 col-lg-4 ">
     <img class="img-responsive" src='{{img.article_image.url}}' alt='img' style="width:500px; height:500px;">
   </div>
-  <div class="col-md-4"></div>
+  <div class="col-md-4 col-lg-4 "></div>
 </div><br>
 <div style="text-align:center;">
   <h1 style="font-family: 'Righteous', cursive;"><u>Name:</u></h1><br>
   <h1>{{ img.img_name }}</h1><br>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-lg-4">
       <h1 style="font-family: 'Righteous', cursive;"><u>Description:</u>
         <h1>
           <h1>{{ img.img_decription }}</h1>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-lg-4 ">
       <h1 style="font-family: 'Righteous', cursive;"><u>Category:</u>
         <h1>
           <h1>{{ img.img_category }}</h1>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-lg-4 ">
       <h1 style="font-family: 'Righteous', cursive;"><u>Location:</u>
         <h1>
           <h1>{{ img.img_location }}</h1>

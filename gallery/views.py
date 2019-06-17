@@ -13,9 +13,16 @@ def show(request,id):
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
         search_term = request.GET.get("image")
-        searched_image = Image.search_by_category(search_term)
+        print(search_term)
+        searched_categories = Category.objects.filter(name=search_term)
+        print(searched_image)
+        photo=[]
+        for category in searched_categories:
+            category_id = category.id
+            searched_images = Image.search_by_category(category_id)
+            photo.extend(searched_images)
         message = f"{search_term}"
-        return render(request, 'search.html',{"message":message,"images": searched_image})
+        return render(request, 'search.html',{"message":message,'photo':photo})
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
