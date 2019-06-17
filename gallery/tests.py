@@ -44,7 +44,7 @@ class CategoryTestClass(TestCase):
 class ImageTestClass(TestCase):
        def setUp(self):
        #creating a new imaage
-           self.new_image = Image(img_name ='eat',img_decription='eatingafrica', article_image=)
+           self.new_image = Image(img_name ='eat',img_decription='eatingafrica', article_image='media/gallery/Fashion-3134828_1920.jpg')
        #Testing instance for the image
 
        def test_instance(self):
