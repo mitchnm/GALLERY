@@ -4,8 +4,8 @@
 <div class="row">
   {% for img in image %}
   <div class="col-md-3 col-sm-3 col-xs-3">
-    <img class="img-responsive" src='{{img.article_image.url}}' alt='img' style="width:250px; height:250px;">
-    <a href="{% url 'show' %}">View more</a>
+    <img class="img-responsive" src='{{img.article_image.url}}' alt='img' style="width:250px; height:250px;"><br>
+    <button class="btn btn-success" style="float: center;"><a href="/photo/{{img.id}}">View more</a></button>
   </div>
   {%empty%}
   <p>No img</p>

@@ -3,13 +3,15 @@
 {% block content %}
 {% for img in image %}
 <div style="text-align: center;">
+  <img class="img-responsive" src='{{img.article_image.url}}' alt='img' style="width:500px; height:500px;">
   <h1 style="font-family: 'Righteous', cursive;"><u>Name:</u></h1><br>
   <h1 style="">{{ img.img_name }}</h1><br>
-  <h1 style="font-family: 'Righteous', cursive;"><u>Description:</u><h1><br>
-  <h1 style="">{{ img.img_decription }}</h1>
-  {% empty %}
-  <h1>No info</h1>
-  {% endfor %}
+  <h1 style="font-family: 'Righteous', cursive;"><u>Description:</u>
+    <h1><br>
+      <h1 style="">{{ img.img_decription }}</h1>
+      {% empty %}
+      <h1>No info</h1>
+      {% endfor %}
 </div>
 
 {% endblock %}

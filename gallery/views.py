@@ -6,8 +6,8 @@ def welcome(request):
 
     return render(request, 'index.html',{'image':image})
 
-def show(request):
-    image = Image.objects.all()
+def show(request,id):
+    image = Image.objects.filter(id=id)
     return render(request, 'gallery.html',{'image':image}) 
 
 
