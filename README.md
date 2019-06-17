@@ -4,13 +4,12 @@
 
 ## Description
 
-a personal gallery application that you display your photos for others to see.
+A personal gallery application that displays your photos for others to see.
 
 ## Features
-* User can register or log in if he had not.
-* User can add a post.
-* User can comment.
-* User can log out when done.
+* View different photos that interest you.
+* Click on a button to expand to view details of the image.
+* Search for different categories or location of photos and view them.
 
 ## Getting Started
 
@@ -33,7 +32,7 @@ a personal gallery application that you display your photos for others to see.
 ## Technologies used
 
 * Python
-* Flask Framework
+* Django Framework
 * HTML, CSS and Bootstrap
 
 ## Bugs and issues
