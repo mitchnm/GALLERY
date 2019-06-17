@@ -1,25 +1,35 @@
-{%extends 'base.html'%} 
+{%extends 'base.html'%}
 {% block content %}
 <div class="container">
 
   <div class="row">
     {% if images%}
-      <h2>Found {{ images|length }} of searched term {{message}}</h2>
+    <h2>Found {{ images|length }} of searched term {{message}}</h2>
     {% else %}
-      <h2> Found 0 photos for the search term {{message}}</h2>
+    <h2> Found 0 photos for the search term {{message}}</h2>
     {% endif %}
 
   </div>
 
   <div class="row">
 
-  {% if images %}
-    {% for article in images %}
-      <div class="col-sm-6 col-md-3">
-          <h1>{{article.img_name}}</h1>
+    {% if images %}
+    {% for img in images %}
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <img class="img-responsive" src='{{img.article_image.url}}' alt='img' style="width:500px; height:500px;">
       </div>
-    {% endfor %}
-  {% endif %}
+      <div class="col-md-4"></div>
+    </div><br>
+    <div style="text-align:center;">
+      <h1 style="font-family: 'Righteous', cursive;"><u>Name:</u></h1><br>
+      <h1>{{ img.img_name }}</h1><br>
+      <h1 style="font-family: 'Righteous', cursive;"><u>Description:</u>
+        <h1>
+          <h1>{{ img.img_decription }}</h1>
+          {% endfor %}
+          {% endif %}
+    </div>
   </div>
-</div>
-{% endblock %}
+  {% endblock %}
